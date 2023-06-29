@@ -2,17 +2,21 @@
 Unit-2-Project
 
 ROUTE TABLE
-
-|       **URL**   | **REST Route** | **HTTP Verb** | **CRUD Action** |   **EJS View(s)**   | **Created Yet?**  |
-| --------------- | -------------- | ------------- | --------------- | ------------------- | ----------------- |
-| /               |                | GET           | read            | home.ejs            | NO                |
-| /albums         | index          | GET           | read            | pet-index.ejs       | NO                |
-| /albums/:id     | show           | GET           | read            | pet-details.ejs     | NO                |
-| /albums/new     | new            | GET           |                 | new-pet.ejs         | NO                |
-| /albums         | create         | POST          | create          |                     | NO                |
-| /albums/:id/edit| edit           | GET           | read            | edit-pet.ejs        | NO                |
-| /albums/:id     | update         | PATCH/PUT     | update          |                     | NO                |
-| /albums/:id     | destroy        | DELETE        | delete          |                     | NO                |
-| /seed           |                | GET           | delete & create |                     | NO                |
-| /about          |                | GET           |                 | about.ejs           | NO                |
-| /*              |                | GET           |                 | 404.ejs             | NO                |
+|       **URL**               | **REST Route** | **HTTP Verb** | **CRUD Action** |   **EJS View(s)**        | **Created Yet?**  |
+| --------------------------- | -------------- | ------------- | --------------- | ------------------------ | ----------------- |
+| /                           |                | GET           | read            | home.ejs                 | YES               |
+| /albums                     | index          | GET           | read            | album-index.ejs            | YES               |
+| /albums/:id                 | show           | GET           | read            | album-details.ejs          | YES               |
+| /albums/new                 | new            | GET           |                 | album-pet.ejs              | YES               |
+| /albums                     | create         | POST          | create          |                          | YES               |
+| /albums/:id/edit            | edit           | GET           | read            | edit-album.ejs             | YES               |
+| /albums/:id                 | update         | PATCH/PUT     | update          |                          | YES               |
+| /albums/:id                 | destroy        | DELETE        | delete          |                          | YES               |
+| /comments/                  | index          | GET           | read            | app-index.ejs            | NO                |
+| /comments/:id               | show           | GET           | read            | app-details.ejs          | NO                |
+| /comments/new/:albumId      | new            | GET           | read            | new-comment.ejs              | NO                |
+| /comments/create/:albumId   | create         | POST          | create          |                          | NO                |
+| /comments/:id               | destroy        | DELETE        | delete          |                          | NO                |
+| /seed                       |                | GET           | delete & create |                          | YES               |
+| /about                      |                | GET           |                 | about.ejs                | YES               |
+| /*                          |                | GET           |                 | 404.ejs                  | YES               |

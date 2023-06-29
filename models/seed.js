@@ -99,4 +99,8 @@ const albums = [
         songList: ['Fight Fire With Fire', 'Ride The Lighting', 'For Whom The Bell Tolls', 'Fade to Black', 'Trapped Under Ice', 'Escape', 'Creeping Death', 'The Call Of Ktulu']
     }
 ]
-]
+
+
+
+//export seed data
+module.exports = albums
