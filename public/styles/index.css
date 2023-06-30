@@ -14,7 +14,20 @@ img {
     max-width: 200px;
 }
 
-header a {
-    color: white;
-    font-family: 'Metal Mania';font-size: 22px;
+
+ul {
+    list-style: none;
 }
+
+main {
+    display: inline-block;
+}
+
+/* 80s */
+.collection.eighties {
+    margin: 10px;
+    padding: 20px;
+
+}
+
+/*  */

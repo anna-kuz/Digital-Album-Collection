@@ -14,4 +14,19 @@
     <%- include('./partials/nav.ejs') %>
     <h1>Welcome to Virtual Vinyl Vault</h1>
     
+
+    <section class="favorited-albums">
+        <h2 class="new">Favorited Albums</h2>
+        <ul class="albums-grid">
+            <% for (let album of albums) { %>
+            <li>
+                <img src="<%= album.albumCover %>" alt="cover-photo">
+                <h3><%= album.albumName %></h3>
+                <p><%= album.year %></p>
+                
+                <a href="/album/<%= album._id %>" class="btn">Buy Now</a>
+            </li>
+            <% } %>
+        </ul>
+    </section>
 </body>
