@@ -25,7 +25,7 @@ router.get('/', (req, res) => {
 
 //new album route
 router.get('/new/:albumId', (req, res) => {
-    db.Album.findById(req.params.petId)
+    db.Album.findById(req.params.albumId)
         .then(album => {
             if (album) {
                 res.render('comments/new-cmt.ejs', { album: album })
@@ -39,7 +39,7 @@ router.get('/new/:albumId', (req, res) => {
 // destroy route
 router.delete('/:id', (req, res) => {
     db.Album.findOneAndUpdate(
-        { 'applications._id': req.params.id },
+        { 'comments._id': req.params.id },
         { $pull: { comments: { _id: req.params.id }}},
         { new: true }
     )

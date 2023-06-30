@@ -1,7 +1,7 @@
 // Require the Mongoose package
 const mongoose = require('mongoose');
 
-// Create a schema to define the properties of the pets collection
+// Create a schema to define the properties of the album collection
 const albumSchema = new mongoose.Schema({
     albumCover: { type: String, required: true },
     albumName: { type: String, required: true },
@@ -9,7 +9,7 @@ const albumSchema = new mongoose.Schema({
     year: { type: Number, min: 0, required: true },
     description: { type: String, required: false },
     genre: { type: String, required: true },
-    isFavorited: { type: Boolean, default: false },
+    isFavorited: { type: String, enum: ['Yes', 'No'], required: true },
     spotifyLink: { type: String, required: false },
     songList: { type: [String], required: false }
 });

@@ -15,8 +15,15 @@ router.get('/', function (req, res) {
     // console.log(db)
     db.Album.find({})
         .then(albums => {
-            res.render('gallery', {
-                albums: albums
+            // console.log(albums)
+                const eighties = albums.filter(album => album.year >= 1980 && album.year < 1990)
+                const nineties = albums.filter(album => album.year >= 1990 && album.year < 2000)
+                const twoThousands = albums.filter(album => album.year >= 2000 && album.year < 2010)
+                // console.log(eighties)       
+            res.render('index', {
+                eighties: eighties,
+                nineties: nineties,
+                twoThousands: twoThousands
             })
         })
 })
@@ -43,6 +50,10 @@ router.get('/:id', function (req, res) {
 
 // new albums show page
 router.post('/', (req, res) => {
+    // console.log(req.body)
+    const songList = req.body.songList.split(" ")
+    req.body.songList = songList
+    // console.log(req.body)
     db.Album.create(req.body)
     .then(album => res.redirect('/albums/' + album._id))
 })

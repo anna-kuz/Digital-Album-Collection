@@ -6,31 +6,66 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
 
-    <%- include('./partials/header.ejs', {title: 'Beanie Babies!'}) %>
-    <link rel="stylesheet" href="/styles/gallery.css">
+    <%- include('./partials/header.ejs', {title: 'Album Collection'}) %>
+    <link rel="stylesheet" href="/styles/index.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
     <main>
-        <section class="listings">
-            <h1>Collected Albums</h1>
+        <section class="collection 80s">
+            <h2>80s</h2>
             <ul>
-                <% for (let album of albums) { %>
                 <li>
+                    <% for (let album of eighties) { %>
                     <figure>
-                        <img src="<%= album.albumCover %>">
+                        <img src="<%= album.albumCover %>" alt="album-cover">
                         <figcaption>
                             <h4><%= album.albumName %> <br> <span class="year"><%= album.year %></span></h4>
                             <p><%= album.bandName %></p>
-                            <a href="/albums/<%= album._id %>"></a>
+                            <a href="/albums/<%= album._id %>">View</a>
                         </figcaption>
                     </figure>
                 </li>
                 <% } %>
             </ul>
         </section>
+        <section class="collection 90s">
+            <h2>90s</h2>
+            <ul>
+                <li>
+                    <% for (let album of nineties) { %>
+                    <figure>
+                        <img src="<%= album.albumCover %>" alt="album-cover">
+                        <figcaption>
+                            <h4><%= album.albumName %> <br> <span class="year"><%= album.year %></span></h4>
+                            <p><%= album.bandName %></p>
+                            <a href="/albums/<%= album._id %>">View</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+        <section class="collection 2000s">
+            <h2>2000s</h2>
+            <ul>
+                <li>
+                    <% for (let album of twoThousands) { %>
+                    <figure>
+                        <img src="<%= album.albumCover %>" alt="album-cover">
+                        <figcaption>
+                            <h4><%= album.albumName %> <br> <span class="year"><%= album.year %></span></h4>
+                            <p><%= album.bandName %></p>
+                            <a href="/albums/<%= album._id %>">View</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+
     </main>
 
     <%- include('./partials/footer.ejs') %>

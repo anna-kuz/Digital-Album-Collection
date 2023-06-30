@@ -2,36 +2,30 @@
 <html lang="en">
 
 <head>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
-
-    <%- include('./partials/head.ejs', {title: 'Beanie Babies!'}) %>
-    <link rel="stylesheet" href="/styles/index.css">
+    <%- include('./partials/header.ejs', {title: `Album`}) %>
+    <link rel="stylesheet" href="/styles/.css">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <main>
-        <section class="listings">
-            <h1>Available Beanie Babies!</h1>
-            <ul>
-                <% for (let bean of beans) { %>
-                <li>
-                    <figure>
-                        <img src="<%= bean.photo %>">
-                        <figcaption>
-                            <h4><%= bean.name %></h4>
-                            <p><%= bean.animal %> <br> <%= bean.type %></p>
-                            <a href="/beans/<%= bean._id %>">$<%= bean.price %></a>
-                        </figcaption>
-                    </figure>
-                </li>
-                <% } %>
-            </ul>
+    <div>
+        <img src="<%= album.albumCover %>">
+        <h2 class="album-name"><%= album.albumName %></h2>
+        <section>
+            <p><strong>Year:</strong> <%= album.year %></p>
+            <p><strong>Band Name:</strong> <%= album.bandName %></p>
+            <p><strong>Genre:</strong> <%= album.genre%></p>
+            <p><strong>Song List:</strong> <%= album.songList%></p>
         </section>
-    </main>
+
+        <section class="actions">
+            <button class="btn"><a href="/albums/<%= album._id %>/edit">Edit</a></button>
+            <form method="POST" action="/albums/<%= album._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+        </section>
+    </div>
 
     <%- include('./partials/footer.ejs') %>
 </body>

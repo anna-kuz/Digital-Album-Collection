@@ -13,7 +13,7 @@ const albums = [
     {
         albumCover: 'https://roxydischouse.com/wp-content/uploads/2016/08/LDM04620.jpg',
         albumName: '...And Justice for All',
-        bandName: 'Metaallica',
+        bandName: 'Metallica',
         year: 1988,
         genre: 'Heavy Metal',
         description: '...And Justice for All is the fourth studio album by American heavy metal band Metallica, released on September 7, 1988, by Elektra Records. It was the first Metallica album to feature bassist Jason Newsted, following the death of their previous bassist Cliff Burton in 1986. Burton received posthumous co-writing credit on "To Live Is to Die" as Newsted followed bass lines Burton had recorded prior to his death. Metallica recorded the album with producer Flemming Rasmussen over four months in early 1988 at One on One Recording Studios in Los Angeles. It features aggressive complexity, fast tempos, and few verse-chorus structures. It contains lyrical themes of political and legal injustices, such as governmental corruption, censorship, and war.',
