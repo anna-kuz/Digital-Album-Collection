@@ -50,13 +50,13 @@ router.get('/:id', function (req, res) {
 
 // new albums show page
 router.post('/', (req, res) => {
-    // console.log(req.body)
-    const songList = req.body.songList.split(" ")
-    req.body.songList = songList
-    // console.log(req.body)
+    const songList = req.body.songList.split(",").map(song => song.trim())
+    const numberedSongList = songList.map((song, index) => `${index + 1}. ${song}`).join("\n")
+    req.body.songList = numberedSongList
     db.Album.create(req.body)
-    .then(album => res.redirect('/albums/' + album._id))
+        .then(album => res.redirect('/albums/' + album._id))
 })
+
 
 
 // edit album

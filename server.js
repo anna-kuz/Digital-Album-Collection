@@ -54,7 +54,7 @@ app.use(methodOverride('_method'));
 
 ///// MOUNT ROUTES
 app.get('/', function (req, res) {
-    db.Album.find({ isFavorited: true })
+    db.Album.find({ isFavorited: 'Yes' })
         .then(albums => {
             res.render('home', {
                 albums: albums

@@ -3,31 +3,70 @@
 
 <head>
     <%- include('./partials/header.ejs', {title: `Album`}) %>
-    <link rel="stylesheet" href="/styles/.css">
+    <link rel="stylesheet" href="/styles/album.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image" href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ispsd.com%2Fwp-content%2Fuploads%2F2013%2F02%2Fwpid-vinyl-record-disc-512.png&f=1&nofb=1&ipt=c5478cc32832f4282f6895714e79dec33da619350aaf74861275da9935b3f06a&ipo=images" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 </head>
 
 <body>
     <%- include('./partials/nav.ejs') %>
 
-    <div>
-        <img src="<%= album.albumCover %>">
-        <h2 class="album-name"><%= album.albumName %></h2>
+    <div class="ev">
+        <div class="cover">
+            <img src="<%= album.albumCover %>">
+        </div>
+        <div class="content">
         <section>
+            <h2 class="album-name"><%= album.albumName %></h2>
+            <br>
             <p><strong>Year:</strong> <%= album.year %></p>
+            <br>
             <p><strong>Band Name:</strong> <%= album.bandName %></p>
+            <br>
             <p><strong>Genre:</strong> <%= album.genre%></p>
+            <br>
+            <p><strong>Description:</strong> <%= album.description%></p>
+            <br>
+            <p><strong>Spotify: </strong><span class="spotifylink"><a href="<%= album.spotifyLink%>">Link </a></span></p>
+            <br>
             <p><strong>Song List:</strong> <%= album.songList%></p>
         </section>
-
-        <section class="actions">
+        </div>
+        <div class="actions">
             <button class="btn"><a href="/albums/<%= album._id %>/edit">Edit</a></button>
             <form method="POST" action="/albums/<%= album._id %>?_method=DELETE">
                 <input class="btn" type="submit" value="Delete" />
             </form>
-        </section>
-    </div>
+        </div>
 
-    <%- include('./partials/footer.ejs') %>
+    </div>
+<div class="comments">
+    <div class="bg-image"></div>
+    <h2>Comments</h2>
+    <div class="actions">
+        <button class="cmt-btn">
+            <a href="/comments/new/<%= album._id %>">Add a Comment</a>
+        </button>
+    </div>
+    <section class="comment-section">
+        <ul>
+            <% if (album.comments && album.comments.length > 0) { %>
+                <% album.comments.forEach((comment) => { %>
+                    <li><h3><%= comment.username %> Says:</h3></li>
+                    <li><p><%= comment.comment %></p></li>
+                    <a href="/comments/<%= comment._id %>">Read More</a>
+                <% }) %>
+            <% } %>
+        </ul>
+    </section>
+</div>
+
+    
+
 </body>
 
 </html>

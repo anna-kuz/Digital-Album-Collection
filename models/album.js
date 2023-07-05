@@ -1,5 +1,6 @@
 // Require the Mongoose package
 const mongoose = require('mongoose');
+const commentSchema = require('./comment.js')
 
 // Create a schema to define the properties of the album collection
 const albumSchema = new mongoose.Schema({
@@ -11,7 +12,8 @@ const albumSchema = new mongoose.Schema({
     genre: { type: String, required: true },
     isFavorited: { type: String, enum: ['Yes', 'No'], required: true },
     spotifyLink: { type: String, required: false },
-    songList: { type: [String], required: false }
+    songList: { type: [String], required: false },
+    comments: [commentSchema]
 });
 
 // Export the schema as a Monogoose model. 

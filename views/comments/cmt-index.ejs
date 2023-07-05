@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/header.ejs', {title: 'Comments'}) %>
+    <link rel="stylesheet" href="/styles/rev-details.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <main>
+        <section class="listings">
+            <ul>
+                <% for (let comment of cmts) { %>
+                <li>
+                    <h4><%= comment.username %></h4>
+                    <p><%= comment.comment %></p>
+                    <a href="/comments/<%= comment._id %>">Read More</a>
+                </li>
+                <% } %>
+            </ul>
+        </section>
+    </main>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

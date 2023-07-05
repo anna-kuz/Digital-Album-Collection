@@ -1,0 +1,134 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+
+}
+
+:root {
+    --gradient: linear-gradient(
+        45deg,
+        #000000,
+        #252525,
+        #252525,
+        rgb(32, 27, 85),
+        #201a57,
+        #050a57
+    );
+}
+body {
+    background: rgb(255, 255, 255);
+    text-align: center;
+    animation: bg-animation 5s infinite alternate;
+    font-family: 'Cinzel', serif;
+}
+
+@keyframes bg-animation {
+    0% {background-position: left;}
+    100% {background-position: right;}
+}
+
+
+.albums-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    list-style: none;
+    margin-top: 2rem;
+}
+
+.albums-grid li {
+    flex-basis: calc(33.33% - 1rem);
+    margin-bottom: 2rem;
+    background-color: #ffffff;
+    transition: transform .2s; /* Animation */
+    max-width: 350px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+}
+
+.albums-grid li:hover {
+    box-shadow:
+    -10px 0 20px rgba(255, 0, 0, 0.301),
+    10px 0 20px rgba(255, 0, 0, 0.301);
+    transform: scale(1.1);
+}
+
+.albums-grid img {
+    padding-top: 30px;
+    max-width: 300px;
+}
+
+.albums-grid .btn {
+    margin: 10px;
+}
+
+.albums-grid h3 {
+    font-size: 20px;
+    margin: 0.5rem 1rem;
+    font-family: 'Cinzel', serif;
+}
+
+.albums-grid p {
+    margin: 0.5rem 1rem;
+}
+
+.fav {
+    text-align: center;
+    color: rgb(78, 78, 78);
+    padding-top: 10px;
+}
+
+.favorited-albums {
+    color: rgba(0, 0, 0, 0.842);
+}
+
+.welcome {
+    padding-top: 40px;
+}
+
+
+p {
+    color: #af0000;
+    font-size: 20px;
+}
+
+.btn {
+    color: #ffffff;
+}
+
+.btn:hover {
+    background-color: #2c2c2c;
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+
+@media only screen and (max-width: 1000px) {
+    .albums-grid img {
+        padding-top: 30px;
+        max-width: 200px;
+    } 
+}
+
+@media only screen and (max-width: 600px) {
+    .albums-grid img {
+        padding-top: 30px;
+        max-width: 100px;
+    } 
+}
+
+.bg-image {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F29882392%2Fr%2Fil%2F987d09%2F3093282442%2Fil_fullxfull.3093282442_t0v8.jpg&f=1&nofb=1&ipt=1f43d917ff712de9906fdfda54f7833369bd9abcee67157b021f40a896e4c10f&ipo=images");
+    filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.4;
+  }

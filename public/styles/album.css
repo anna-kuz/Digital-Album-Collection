@@ -1,0 +1,174 @@
+
+
+
+.ev {
+    display: grid; 
+    grid-template-columns: 1fr 1fr; 
+    grid-template-rows: 1fr; 
+    gap: 0px 0px; 
+    grid-template-areas: 
+      "cover content"
+      "actions actions"
+      
+  }
+  .cover { grid-area: cover; }
+  .content { grid-area: content; }
+  .actions { grid-area: actions; }
+
+.cover img {
+    min-width: 300px;
+    width: 100%;
+    min-height: 150px;
+    margin-bottom: 10px;
+    padding: 100px;
+    
+}
+
+.content {
+    padding: 50px;
+    font-family: 'Cinzel', serif;
+    font-weight: 700;
+}
+
+.album-name {
+    font-size: 70px;
+    color: rgb(0, 0, 0);
+    font-family: 'Metal Mania';
+    font-weight: 300;
+
+}
+
+.spotifylink a {
+    color: rgb(0, 0, 0);
+    text-decoration: underline;
+}
+
+.spotifylink a:hover {
+    color: rgb(146, 146, 146);
+    text-decoration: overline;
+}
+
+.content p {
+    font-size: 20px;
+    color: #000000;
+}
+
+strong {
+    font-weight: bold;
+    color: #c70000;
+}
+
+
+
+.actions {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding-bottom: 40px;
+}
+
+.btn {
+    color: white;
+    font-family: 'Metal Mania';
+    font-size: 30px;
+}
+
+.btn:hover {
+        color: white;
+}
+
+.btn a {
+    color: white;
+    font-family: 'Metal Mania';
+}
+
+
+.comments {
+    /* border: 10px solid black; */
+    padding-top: 40px;
+
+    /* background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F29882392%2Fr%2Fil%2F987d09%2F3093282442%2Fil_fullxfull.3093282442_t0v8.jpg&f=1&nofb=1&ipt=1f43d917ff712de9906fdfda54f7833369bd9abcee67157b021f40a896e4c10f&ipo=images");; */
+}
+
+.comments h2 {
+
+    font-family: 'Metal Mania';
+    color: #f80000;
+    font-weight: 300;
+    font-size: 50px;
+    text-align: center;
+}
+
+.cmt-btn {
+    display: inline;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Metal Mania';
+    text-align: center;
+
+}
+
+.cmt-btn:hover {
+    background-color: #414141;
+    color: #ffffff;
+}
+
+.comments a {
+    color: white;
+    text-align: center;
+    align-items: center;
+
+}
+
+.comments h2 {
+    padding-bottom: 40px;
+}
+
+.comment-section {
+    border: 5px solid rgb(170, 0, 0);
+    padding-left: 50px;
+    background-color: #000000;
+
+}
+
+.comment-section p {
+    color: rgb(255, 255, 255);
+    font-family: 'Cinzel', serif;
+    font-weight: 800;
+    font-size: 20px;
+}
+
+.comment-section a {
+    color: rgb(150, 0, 0);
+}
+
+.comment-section h3 {
+    font-family: 'Metal Mania';
+    font-size: 30px;
+    font-weight: 200;
+    color: #b10000;
+    padding-bottom: 10px;
+}
+
+ul {
+    list-style: none;
+}
+
+/* .bg-image {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F29882392%2Fr%2Fil%2F987d09%2F3093282442%2Fil_fullxfull.3093282442_t0v8.jpg&f=1&nofb=1&ipt=1f43d917ff712de9906fdfda54f7833369bd9abcee67157b021f40a896e4c10f&ipo=images");
+    filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.4;
+  } */
+
+

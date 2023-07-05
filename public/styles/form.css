@@ -1,0 +1,98 @@
+body {
+    background-color: #a7a7a7;
+    font-family: 'Cinzel', serif;
+}
+
+
+.hero {
+    height: 20vh;
+    min-height: 175px;
+    margin-bottom: 2rem;
+    color: #000000;
+    padding-top: 40px;
+    font-family: 'Metal Mania';
+}
+.hero h2 {
+    font-size: 70px;
+    font-weight: 300;
+}
+
+
+form {
+    width: 60%;
+    min-width: 300px;
+    margin: 0 auto 2rem auto;
+    font-family: 'Cinzel', serif;
+    
+    
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #fff;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+textarea,
+select {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: 1px solid #cacaca;
+    box-sizing: border-box;
+    color: #000000;
+    background-color: #ffffff;
+    font-family: 'Cinzel', serif;
+
+    
+}
+
+textarea {
+    height: 100px;
+}
+
+input[type="submit"] {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+    padding: 15px;
+}
+
+input[type="submit"]:hover {
+    background-color: #000000;
+    color: #ffffff;
+    border: none;
+}
+
+
+.bg-image {
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F29882392%2Fr%2Fil%2F987d09%2F3093282442%2Fil_fullxfull.3093282442_t0v8.jpg&f=1&nofb=1&ipt=1f43d917ff712de9906fdfda54f7833369bd9abcee67157b021f40a896e4c10f&ipo=images");
+    filter: blur(10px);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.4;
+  }
+
+  .comment h1 {
+    padding-top: 50px;
+  }
+
+
+  .comment h3, p {
+    padding-top: 20px;
+    padding-bottom: 40px;
+    
+  }
+

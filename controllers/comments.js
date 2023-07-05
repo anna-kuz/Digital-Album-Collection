@@ -10,40 +10,62 @@ const db = require('../models')
 
 //ROUTES
 
-//index route
+// Index
 router.get('/', (req, res) => {
-    db.Album.find({}, { comments: true, _id: false })
+	db.Album.find({}, { comments: true, _id: false })
         .then(albums => {
-            // format query results to appear in one array, 
-            // rather than an array of objects containing arrays 
-            const flatList = []
-            for (let album of albums) { flatList.push(...album.comments) }
-            res.render('comments/cmt-index', { apps: flatList })
-        })
+	    	const flatList = []
+	    	for (let album of albums) {
+	        	flatList.push(...album.comments)
+	    	} res.render('comments/cmt-index', { cmts: flatList})
+		}
+        
+	)
 });
 
-
-//new album route
+// New Route
 router.get('/new/:albumId', (req, res) => {
     db.Album.findById(req.params.albumId)
         .then(album => {
             if (album) {
                 res.render('comments/new-cmt.ejs', { album: album })
             } else {
-                res.send('404 Error: Page Not Found')
+                res.render('404')
             }
         })
 })
 
+// Create Route
+router.post('/create/:albumId', (req, res) => {
+    db.Album.findByIdAndUpdate(
+        req.params.albumId,
+        { $push: { comments: req.body } },
+        { new: true }
+    )
+        .then(() => res.redirect('/albums/' + req.params.albumId))
+});
 
-// destroy route
+// Show Route
+router.get('/:id', (req, res) => {
+    db.Album.findOne(
+        { 'comments._id': req.params.id },
+        { 'comments.$': true, _id: false }
+    )
+        .then(album => {
+            res.render('comments/cmt-album', { cmt: album.comments[0] })
+        })
+});
+
+// Destroy Route
 router.delete('/:id', (req, res) => {
     db.Album.findOneAndUpdate(
         { 'comments._id': req.params.id },
-        { $pull: { comments: { _id: req.params.id }}},
+        { $pull: { comments: { _id: req.params.id } } },
         { new: true }
     )
-})
+    .then(album => res.redirect('/albums/' + album._id))
+});
 
 
+// Export routes
 module.exports = router

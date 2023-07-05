@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/header.ejs', {title: 'Leave a Comment'}) %>
+    <link rel="stylesheet" href="/styles/form.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image" href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ispsd.com%2Fwp-content%2Fuploads%2F2013%2F02%2Fwpid-vinyl-record-disc-512.png&f=1&nofb=1&ipt=c5478cc32832f4282f6895714e79dec33da619350aaf74861275da9935b3f06a&ipo=images" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+
+    <section class="hero">
+        <h2>Comment:</h2>
+        <h4><i>Leave a comment on: <a href="/albums/<%= album._id %>"><%= album.albumName %></a></i></h4>
+    </section>
+
+    <form action="/comments/create/<%= album._id %>" method="POST">
+        <label for="username">Username:</label><br>
+        <input type="text" id="username" name="username" required><br>
+
+        <label for="comment">Comment:</label><br>
+        <textarea id="comment" name="comment" required></textarea><br>
+
+        <input type="submit" value="Submit">
+    </form>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>

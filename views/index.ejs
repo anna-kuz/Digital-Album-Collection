@@ -4,7 +4,10 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap" rel="stylesheet">
+<link rel="icon" type="image" href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ispsd.com%2Fwp-content%2Fuploads%2F2013%2F02%2Fwpid-vinyl-record-disc-512.png&f=1&nofb=1&ipt=c5478cc32832f4282f6895714e79dec33da619350aaf74861275da9935b3f06a&ipo=images" />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
 
     <%- include('./partials/header.ejs', {title: 'Album Collection'}) %>
     <link rel="stylesheet" href="/styles/index.css">
@@ -12,10 +15,12 @@
 
 <body>
     <%- include('./partials/nav.ejs') %>
-
+<div class="bg-image"></div>
     <main>
-        <section class="collection eighties">
+        <div class="container">
             <h2>80s</h2>
+            <section class="collection eighties">
+            <div class="card">
             <ul>
                 <li>
                     <% for (let album of eighties) { %>
@@ -24,15 +29,17 @@
                         <figcaption>
                             <h4><%= album.albumName %> <br> <span class="year"><%= album.year %></span></h4>
                             <p><%= album.bandName %></p>
-                            <a href="/albums/<%= album._id %>">View</a>
+                            <a href="/albums/<%= album._id %>" class="btn">View</a>
                         </figcaption>
                     </figure>
                 </li>
                 <% } %>
             </ul>
+            </div>
         </section>
-        <section class="collection 90s">
+        <section class="collection nineties">
             <h2>90s</h2>
+            <div class="card">
             <ul>
                 <li>
                     <% for (let album of nineties) { %>
@@ -41,15 +48,17 @@
                         <figcaption>
                             <h4><%= album.albumName %> <br> <span class="year"><%= album.year %></span></h4>
                             <p><%= album.bandName %></p>
-                            <a href="/albums/<%= album._id %>">View</a>
+                            <a href="/albums/<%= album._id %>" class="btn">View</a>
                         </figcaption>
                     </figure>
                 </li>
                 <% } %>
             </ul>
+            </div>
         </section>
-        <section class="collection 2000s">
+        <section class="collection twoThousands">
             <h2>2000s</h2>
+            <div class="card">
             <ul>
                 <li>
                     <% for (let album of twoThousands) { %>
@@ -58,14 +67,15 @@
                         <figcaption>
                             <h4><%= album.albumName %> <br> <span class="year"><%= album.year %></span></h4>
                             <p><%= album.bandName %></p>
-                            <a href="/albums/<%= album._id %>">View</a>
+                            <a href="/albums/<%= album._id %>" class="btn">View</a>
                         </figcaption>
                     </figure>
                 </li>
                 <% } %>
             </ul>
+            </div>
         </section>
-
+        </div>
     </main>
 
     <%- include('./partials/footer.ejs') %>

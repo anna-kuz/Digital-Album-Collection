@@ -6,5 +6,56 @@
 }
 
 body {
-    font-family: 'Metal Mania';font-size: 22px;
+    font-family: 'Fauna One', serif;
+    background-position: center;
+    background-size: cover;
+    color: rgb(0, 0, 0);
+
 }
+
+.hero h2 {
+    padding-top: 50px;
+    color: rgb(199, 0, 0);
+}
+
+h2 {
+    font-family: 'Cinzel', serif;
+    text-align: center;
+    font-size: 30px;
+
+}
+.content h2 {
+    color: rgb(199, 0, 0);
+}
+
+h4 {
+    font-family: 'Fauna One', serif;
+
+}
+
+p {
+    font-family: 'Fauna One', serif;
+    margin: 10px auto;
+    text-align: center;
+    font-size: 20px;
+    max-width: 80%;
+}
+
+.vvv-title {
+    color: rgb(107, 0, 0);
+}
+
+
+.bg-image {
+        background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F29882392%2Fr%2Fil%2F987d09%2F3093282442%2Fil_fullxfull.3093282442_t0v8.jpg&f=1&nofb=1&ipt=1f43d917ff712de9906fdfda54f7833369bd9abcee67157b021f40a896e4c10f&ipo=images");
+        filter: blur(10px);
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-size: cover;
+        top: 0;
+        left: 0;
+        z-index: -1;
+        opacity: 0.4;
+      }
+

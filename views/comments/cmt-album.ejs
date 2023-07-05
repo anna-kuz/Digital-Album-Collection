@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <%- include('../partials/header.ejs', {title: 'Comments'}) %>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="icon" type="image" href="https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fwww.ispsd.com%2Fwp-content%2Fuploads%2F2013%2F02%2Fwpid-vinyl-record-disc-512.png&f=1&nofb=1&ipt=c5478cc32832f4282f6895714e79dec33da619350aaf74861275da9935b3f06a&ipo=images" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/styles/form.css">
+</head>
+
+<body>
+    <%- include('../partials/nav.ejs') %>
+    <div class="bg-image"></div>
+    <section class="comment">
+        <h1>Username: <%= cmt.username %></h1>
+        <table>
+            <tr>
+                <th>
+                    <h3>Comment: </h2>
+                </th>
+                <td>
+                    <p><%= cmt.comment %></p>
+                </td>
+            </tr>
+        </table>
+
+        <div class="actions">
+            <form method="POST" action="/comments/<%= cmt._id %>?_method=DELETE">
+                <input class="btn" type="submit" value="Delete" />
+            </form>
+        </div>
+    </section>
+
+    <%- include('../partials/footer.ejs') %>
+</body>
+
+</html>
