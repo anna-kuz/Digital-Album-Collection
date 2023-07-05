@@ -73,7 +73,7 @@ input[type="submit"]:hover {
 
 
 .bg-image {
-    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fi.etsystatic.com%2F29882392%2Fr%2Fil%2F987d09%2F3093282442%2Fil_fullxfull.3093282442_t0v8.jpg&f=1&nofb=1&ipt=1f43d917ff712de9906fdfda54f7833369bd9abcee67157b021f40a896e4c10f&ipo=images");
+    background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fimages.pexels.com%2Fphotos%2F1374557%2Fpexels-photo-1374557.jpeg%3Fcs%3Dsrgb%26dl%3Dvinyl-record-1374557.jpg%26fm%3Djpg&f=1&nofb=1&ipt=0ad58b14229aff68461ba72d053df5ccaf10097a3b1124a913c410b6b161ff81&ipo=images");
     filter: blur(10px);
     position: fixed;
     width: 100%;
@@ -88,6 +88,7 @@ input[type="submit"]:hover {
   .comment h1 {
     padding-top: 50px;
   }
+
 
 
   .comment h3, p {
