@@ -20,3 +20,12 @@ ROUTE TABLE
 | /seed                       |                | GET           | delete & create |                          | YES               |
 | /about                      |                | GET           |                 | about.ejs                | YES               |
 | /*                          |                | GET           |                 | 404.ejs                  | YES               |
+
+
+
+screenshot of the app: ![Alt text](image.png)
+
+Tech used: EJS, MongoDB, Node.js, Express
+
+
+click link to open app: https://virtual-vinyl-vault-f0611426aaeb.herokuapp.com/

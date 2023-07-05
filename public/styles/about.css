@@ -16,15 +16,16 @@ body {
 .hero h2 {
     padding-top: 50px;
     color: rgb(199, 0, 0);
+    font-family: 'Cinzel', serif;
 }
 
 h2 {
-    font-family: 'Cinzel', serif;
     text-align: center;
     font-size: 30px;
 
 }
 .content h2 {
+    font-family: 'Cinzel', serif;
     color: rgb(199, 0, 0);
 }
 
