@@ -77,7 +77,7 @@ const albums = [
         songList: ['Blew', ' Floyd The Barber', ' About A Girl', ' School', ' Love Buzz', ' Paper Cuts', ' Negative Creep', ' Scoff', ' Swap Meet', ' Mr. Moustache', ' Sifting', ' Big Cheese', ' Downer']
     },
     {
-        albumCover: 'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse4.explicit.bing.net%2Fth%3Fid%3DOIP.c07byfWP-xZ9hfjZFf3r7wHaHa%26pid%3DApi&f=1&ipt=c84eecb969174d9f27af9cad231ea615e7370d0b3696742584aa1ec0d27eada2&ipo=images',
+        albumCover: 'http://4.bp.blogspot.com/-eML4wGa-7RU/TC06L4h3svI/AAAAAAAABhA/pl7nlIMw2SQ/s500/pearl_jam_vs.png',
         albumName: 'Vs.',
         bandName: 'Pearl Jam',
         year: 1993,
