@@ -1,0 +1,18 @@
+        <div class="container">
+            <h2>80s</h2>
+            <div class="card">
+            <ul>
+                <li>
+                    {% for fighter in fighters %}
+                    <figure>
+                        <img class="card-img" src="{{ fighter.image }}" alt="Card image cap">
+                        <figcaption>
+                            <h4>{{ fighter.name }}</h4>
+                            <p>Series: {{ fighter.series_name }}</p>
+                            <a href="{% url 'detail' fighter_id=fighter.id %}" class="btn">View</a>
+                        </figcaption>
+                    </figure>
+                </li>
+                {% endfor %}
+            </ul>
+        </div>
